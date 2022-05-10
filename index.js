@@ -12,7 +12,7 @@ const transport = nodemailer.createTransport({
   },
 });
 
-setInterval(async () => {
+const sendMailAutomatically = async () => {
   await transport.sendMail({
     from: '"Fred Foo 👻" <oi@example.com>', // sender address
     to: "Rian Oliveira <riandiasdeoliveira2001@gmail.com>", // list of receivers
@@ -20,7 +20,9 @@ setInterval(async () => {
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>", // html body
   });
-}, 10000);
+};
+
+sendMailAutomatically();
 
 app.get("/", (req, res) => {
   res.send("Automation running successfully!");
