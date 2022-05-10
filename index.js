@@ -20,7 +20,11 @@ setInterval(async () => {
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>", // html body
   });
-}, 5000);
+}, 10000);
+
+app.get("/", (req, res) => {
+  res.send("Automation running successfully!");
+});
 
 app.listen(process.env.PORT || 3333, () => {
   console.log("Server running on http://localhost:3333");
