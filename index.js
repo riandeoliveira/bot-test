@@ -22,8 +22,8 @@ const sendMailAutomatically = async () => {
   });
 };
 
-setInterval(() => {
-  sendMailAutomatically();
+setInterval(async () => {
+  await sendMailAutomatically();
 }, 5000);
 
 app.get("/", (req, res) => {
