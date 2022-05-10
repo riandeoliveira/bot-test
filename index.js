@@ -23,6 +23,8 @@ const sendMailAutomatically = async () => {
 };
 
 sendMailAutomatically();
+sendMailAutomatically();
+sendMailAutomatically();
 
 app.get("/", (req, res) => {
   res.send("Automation running successfully!");
