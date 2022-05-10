@@ -1,5 +1,6 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
+require("dotenv");
 
 const app = express();
 
@@ -24,8 +25,8 @@ const sendMailAutomatically = async () => {
 
 setInterval(() => {
   sendMailAutomatically();
-  console.log("Passou por aqui!");
-}, 5000);
+  console.log("Enviado!");
+}, process.env.CRAWLER_INTERVAL);
 
 app.get("/", (req, res) => {
   res.send("Automation running successfully!");
