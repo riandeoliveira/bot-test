@@ -22,7 +22,7 @@ const sendMailAutomatically = async () => {
   });
 };
 
-setInterval(sendMailAutomatically, 15000);
+sendMailAutomatically();
 
 app.get("/", (req, res) => {
   res.send("Automation running successfully!");
